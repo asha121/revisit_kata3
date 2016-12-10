@@ -1,10 +1,10 @@
 package com.cleancode.tdd;
 
 public class NumberLessThanHundred extends NumberLessThanTwenty implements PositveNumber {
+	String[] tySeries = { "", "", "TWENTY ", "THIRTY ", "FORTY ", "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ",
+	"NINETY " };
 	@Override
 	public String inWords(int input) {
-		String[] twenty = { "", "", "TWENTY ", "THIRTY ", "FORTY ", "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ",
-				"NINETY " };
-		return twenty[input / 10] + super.inWords(input % 10);
+		return tySeries[input / 10] + super.inWords(input % 10);
 	}
 }
