@@ -6,6 +6,8 @@ public class PositiveIntegers {
 		String word = null;
 		if (input == 1) {
 			word = "ONE ";
+		}else if (input == 2) {
+			word = "TWO ";
 		}
 		return word;
 	}
