@@ -10,4 +10,8 @@ public class PositiveIntegersShould {
 	public void display_1_as_one() {
 		assertEquals("ONE ", new PositiveIntegers().inWords(1));
 	}
+	@Test
+	public void display_2_as_two() {
+		assertEquals("TWO ", new PositiveIntegers().inWords(2));
+	}
 }
