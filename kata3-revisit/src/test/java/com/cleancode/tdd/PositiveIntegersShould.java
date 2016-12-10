@@ -106,6 +106,6 @@ public class PositiveIntegersShould {
 	}
 	@Test
 	public void display_1000_as_one_thousand() {
-		assertEquals("ONE THOUSAND  ", new PositiveIntegers().inWords(1000));
+		assertEquals("ONE THOUSAND ", new PositiveIntegers().inWords(1000));
 	}
 }

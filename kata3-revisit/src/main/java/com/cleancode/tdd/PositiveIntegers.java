@@ -11,8 +11,11 @@ public class PositiveIntegers {
 		} else if (input < 100) {
 			integer = new NumberLessThanHundred();
 			words = integer.inWords(input);
-		} else {
+		} else if (input < 1000) {
 			integer = new NumberLessThanThousand();
+			words = integer.inWords(input);
+		} else {
+			integer = new NumbeGreaterOrThousand();
 			words = integer.inWords(input);
 		}
 

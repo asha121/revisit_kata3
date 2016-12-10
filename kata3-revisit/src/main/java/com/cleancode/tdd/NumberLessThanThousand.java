@@ -4,9 +4,13 @@ public class NumberLessThanThousand extends NumberLessThanHundred implements Pos
 
 	@Override
 	public String inWords(int input) {
-		String[] tySeries = { "HUNDRED " };
-		String and = (input % 100 > 0) ? "AND " : "";
-		return lessThanTwenty[input / 100] + tySeries[0] + and + super.inWords(input % 100);
+		String word = "";
+		if (input > 0) {
+			String hundred = "HUNDRED ";
+			String and = (input % 100 > 0) ? "AND " : "";
+			word = lessThanTwenty[input / 100] + hundred + and + super.inWords(input % 100);
+		}
+		return word;
 	}
 
 }
