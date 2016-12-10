@@ -104,4 +104,8 @@ public class PositiveIntegersShould {
 	public void display_999_as_nine_hundred_ninety_nine() {
 		assertEquals("NINE HUNDRED AND NINETY NINE ", new PositiveIntegers().inWords(999));
 	}
+	@Test
+	public void display_1000_as_one_thousand() {
+		assertEquals("ONE THOUSAND  ", new PositiveIntegers().inWords(1000));
+	}
 }
