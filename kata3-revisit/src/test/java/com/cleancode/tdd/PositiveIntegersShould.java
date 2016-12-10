@@ -89,8 +89,8 @@ public class PositiveIntegersShould {
 	}
 
 	@Test
-	public void display_98_as_ninetyeight() {
-		assertEquals("NINETY EIGHT ", new PositiveIntegers().inWords(98));
+	public void display_100_as_one_hundred() {
+		assertEquals("ONE HUNDRED ", new PositiveIntegers().inWords(100));
 	}
 
 }
