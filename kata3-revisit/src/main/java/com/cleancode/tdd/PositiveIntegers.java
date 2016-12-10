@@ -1,22 +1,21 @@
 package com.cleancode.tdd;
 
+import static com.cleancode.tdd.NumberFactory.getInstance;
+
+import com.cleancode.tdd.NumberFactory.Name;
+
 public class PositiveIntegers {
 
 	public String inWords(int input) {
 		String words = "";
-		PositveNumber integer;
 		if (input < 20) {
-			integer = new NumberLessThanTwenty();
-			words = integer.inWords(input);
+			words = getInstance(Name.LESS_THAN_TWENTy).inWords(input);
 		} else if (input < 100) {
-			integer = new NumberLessThanHundred();
-			words = integer.inWords(input);
+			words = getInstance(Name.LESS_THAN_HUNDRED).inWords(input);
 		} else if (input < 1000) {
-			integer = new NumberLessThanThousand();
-			words = integer.inWords(input);
+			words = getInstance(Name.LESS_THAN_THOUSAND).inWords(input);
 		} else {
-			integer = new NumbeGreaterOrThousand();
-			words = integer.inWords(input);
+			words = getInstance(Name.GREATER_THAN_THOUSAND).inWords(input);
 		}
 
 		return words;
