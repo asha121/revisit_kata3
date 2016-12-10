@@ -108,4 +108,8 @@ public class PositiveIntegersShould {
 	public void display_1000_as_one_thousand() {
 		assertEquals("ONE THOUSAND ", new PositiveIntegers().inWords(1000));
 	}
+	@Test
+	public void display_1007_as_one_thousand_seven() {
+		assertEquals("ONE THOUSAND AND SEVEN ", new PositiveIntegers().inWords(1007));
+	}
 }
