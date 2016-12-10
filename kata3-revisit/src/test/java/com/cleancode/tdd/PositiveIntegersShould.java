@@ -14,4 +14,8 @@ public class PositiveIntegersShould {
 	public void display_2_as_two() {
 		assertEquals("TWO ", new PositiveIntegers().inWords(2));
 	}
+	@Test
+	public void display_9_as_NINE() {
+		assertEquals("NINE ", new PositiveIntegers().inWords(9));
+	}
 }
