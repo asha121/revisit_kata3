@@ -53,4 +53,8 @@ public class PositiveIntegersShould {
 	public void display_21_as_twentyone() {
 		assertEquals("TWENTY ONE ", new PositiveIntegers().inWords(21));
 	}
+	@Test
+	public void display_22_as_twentytwo() {
+		assertEquals("TWENTY TWO ", new PositiveIntegers().inWords(22));
+	}
 }
