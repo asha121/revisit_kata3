@@ -6,11 +6,11 @@ public class PositiveIntegers {
 		String[] lessThanTwenty = { "", "ONE ", "TWO ", "THREE ", "FOUR ", "FIVE ", "SIX ", "SEVEN ", "EIGHT ", "NINE ", "TEN ",
 				"ELEVEN ", "TWELVE ", "THIRTEEN ", "FOURTEEN ", "FIFTEEN ", "SIXTEEN ", "SEVENTEEN ", "EIGHTEEN ",
 				"NINETEEN "};
-		String[] twentyOnwards = {"TWENTY ","TWENTY ONE ","TWENTY TWO "};
+		String[] twentyOnwards = {"","TWENTY "};
 		if (input<20) {
 			return lessThanTwenty[input];
 		}
-		return twentyOnwards[input%20];
+		return twentyOnwards[input/20]+lessThanTwenty[input%20];
 		
 	}
 
