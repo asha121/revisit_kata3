@@ -100,4 +100,8 @@ public class PositiveIntegersShould {
 	public void display_121_as_one_hundred_twenty_one() {
 		assertEquals("ONE HUNDRED AND TWENTY ONE ", new PositiveIntegers().inWords(121));
 	}
+	@Test
+	public void display_999_as_nine_hundred_ninety_nine() {
+		assertEquals("NINE HUNDRED AND NINETY NINE ", new PositiveIntegers().inWords(999));
+	}
 }
