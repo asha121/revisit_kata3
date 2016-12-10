@@ -40,7 +40,7 @@ public class PositiveIntegersShould {
 	public void display_from_11_to_18() {
 		int[] range = { 11, 12, 13, 14, 15, 16, 17, 18 };
 		String[] word = { "ELEVEN ", "TWELVE ", "THIRTEEN ", "FOURTEEN ", "FIFTEEN ", "SIXTEEN ", "SEVENTEEN ",
-				"EIGHTEEN "};
+				"EIGHTEEN " };
 		String[] expected = new String[8];
 		int index = 0;
 		for (int input : range) {
@@ -49,18 +49,22 @@ public class PositiveIntegersShould {
 		}
 		assertEquals(word, expected);
 	}
+
 	@Test
 	public void display_21_as_twentyone() {
 		assertEquals("TWENTY ONE ", new PositiveIntegers().inWords(21));
 	}
+
 	@Test
 	public void display_22_as_twentytwo() {
 		assertEquals("TWENTY TWO ", new PositiveIntegers().inWords(22));
 	}
+
 	@Test
 	public void display_29_as_twentynine() {
 		assertEquals("TWENTY NINE ", new PositiveIntegers().inWords(29));
 	}
+
 	@Test
 	public void display_30_as_Thrity() {
 		assertEquals("THIRTY ", new PositiveIntegers().inWords(30));
