@@ -66,20 +66,20 @@ public class PositiveIntegersShould {
 	}
 
 	@Test
-	public void display_30_as_Thrity() {
+	public void display_30_as_thrity() {
 		assertEquals("THIRTY ", new PositiveIntegers().inWords(30));
 	}
 
 	@Test
-	public void display_40_as_Forty() {
+	public void display_40_as_forty() {
 		assertEquals("FORTY ", new PositiveIntegers().inWords(40));
 	}
 
 	@Test
-	public void display_range_from_50_to_90() {
-		int[] range = { 50, 60, 70, 80, 90 };
-		String[] word = { "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY " };
-		String[] expected = new String[5];
+	public void display_range_from_50_to_99() {
+		int[] range = { 50, 60, 70, 80, 90, 98, 99 };
+		String[] word = { "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY ","NINETY EIGHT ","NINETY NINE "  };
+		String[] expected = new String[7];
 		int index = 0;
 		for (int input : range) {
 			expected[index] = new PositiveIntegers().inWords(input);
@@ -87,4 +87,10 @@ public class PositiveIntegersShould {
 		}
 		assertEquals(word, expected);
 	}
+
+	@Test
+	public void display_98_as_ninetyeight() {
+		assertEquals("NINETY EIGHT ", new PositiveIntegers().inWords(98));
+	}
+
 }
