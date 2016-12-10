@@ -5,7 +5,7 @@ public class PositiveIntegers {
 	public String inWords(int input) {
 		String[] word = { "", "ONE ", "TWO ", "THREE ", "FOUR ", "FIVE ", "SIX ", "SEVEN ", "EIGHT ", "NINE ", "TEN ",
 				"ELEVEN ", "TWELVE ", "THIRTEEN ", "FOURTEEN ", "FIFTEEN ", "SIXTEEN ", "SEVENTEEN ", "EIGHTEEN ",
-				"NINETEEN ","TWENTY ","TWENTY ONE " };
+				"NINETEEN ","TWENTY ","TWENTY ONE ","TWENTY TWO " };
 		return word[input];
 	}
 
