@@ -1,23 +1,22 @@
 package com.cleancode.tdd;
 
+import org.yaml.snakeyaml.serializer.NumberAnchorGenerator;
+
 public class NumberFactory {
-	enum Name {
-		LESS_THAN_TWENTy, LESS_THAN_HUNDRED, LESS_THAN_THOUSAND, GREATER_THAN_THOUSAND
+	enum Number {
+		LESS_THAN_TWENTy(new NumberLessThanTwenty()), 
+		LESS_THAN_HUNDRED(new NumberLessThanHundred()), 
+		LESS_THAN_THOUSAND(	new NumberLessThanThousand()), 
+		GREATER_THAN_THOUSAND(new NumbeGreaterOrThousand());
+		private final PositveNumber instance;
 
-	};
-
-	public static PositveNumber getInstance(Name identifier) {
-		PositveNumber number;
-		if (Name.LESS_THAN_TWENTy == identifier) {
-			number = new NumberLessThanTwenty();
-		} else if (Name.LESS_THAN_HUNDRED == identifier) {
-			number = new NumberLessThanHundred();
-		} else if (Name.LESS_THAN_THOUSAND == identifier) {
-			number = new NumberLessThanThousand();
-		} else {
-			number = new NumbeGreaterOrThousand();
+		private Number(PositveNumber instance) {
+			this.instance = instance;
 		}
-		return number;
-	}
 
+		public PositveNumber getInstance() {
+			return this.instance;
+		}
+
+	}
 }
