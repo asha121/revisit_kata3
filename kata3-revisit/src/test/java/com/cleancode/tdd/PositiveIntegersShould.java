@@ -69,8 +69,22 @@ public class PositiveIntegersShould {
 	public void display_30_as_Thrity() {
 		assertEquals("THIRTY ", new PositiveIntegers().inWords(30));
 	}
+
 	@Test
 	public void display_40_as_Forty() {
 		assertEquals("FORTY ", new PositiveIntegers().inWords(40));
+	}
+
+	@Test
+	public void display_range_from_50_to_90() {
+		int[] range = { 50, 60, 70, 80, 90 };
+		String[] word = { "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY " };
+		String[] expected = new String[5];
+		int index = 0;
+		for (int input : range) {
+			expected[index] = new PositiveIntegers().inWords(input);
+			index = index + 1;
+		}
+		assertEquals(word, expected);
 	}
 }
