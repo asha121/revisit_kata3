@@ -78,7 +78,7 @@ public class PositiveIntegersShould {
 	@Test
 	public void display_range_from_50_to_99() {
 		int[] range = { 50, 60, 70, 80, 90, 98, 99 };
-		String[] word = { "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY ","NINETY EIGHT ","NINETY NINE "  };
+		String[] word = { "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY ", "NINETY EIGHT ", "NINETY NINE " };
 		String[] expected = new String[7];
 		int index = 0;
 		for (int input : range) {
@@ -93,4 +93,8 @@ public class PositiveIntegersShould {
 		assertEquals("ONE HUNDRED ", new PositiveIntegers().inWords(100));
 	}
 
+	@Test
+	public void display_101_as_one_hundred_one() {
+		assertEquals("ONE HUNDRED ONE ", new PositiveIntegers().inWords(101));
+	}
 }
