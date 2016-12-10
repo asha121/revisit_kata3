@@ -69,4 +69,8 @@ public class PositiveIntegersShould {
 	public void display_30_as_Thrity() {
 		assertEquals("THIRTY ", new PositiveIntegers().inWords(30));
 	}
+	@Test
+	public void display_40_as_Forty() {
+		assertEquals("FORTY ", new PositiveIntegers().inWords(40));
+	}
 }
