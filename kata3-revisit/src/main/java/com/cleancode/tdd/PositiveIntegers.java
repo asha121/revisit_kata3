@@ -8,9 +8,11 @@ public class PositiveIntegers {
 		if (input < 20) {
 			integer = new NumberLessThanTwenty();
 			words = integer.inWords(input);
-		}else{
+		}else if(input < 100){
 			integer = new  NumberLessThanHundred();
 			words = integer.inWords(input);
+		}else{
+			words="ONE HUNDRED ";
 		}
 		
 		return words;
